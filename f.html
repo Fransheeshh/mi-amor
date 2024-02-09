@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Francis</title>
+<style>
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+    #Bn {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+    }
+    #By {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+    }
+</style>
+<script type="text/javascript">
+    var flag = 1;
+
+    function f1() {
+        var Name = prompt("What should I call you?");
+        
+        if (Name === "" || Name === null) {
+            alert("Please enter your name.");
+        } else {
+            alert("Hi " + Name + ", always remember you're special.");
+        }
+    }
+
+    function f() {
+        var Bn = document.getElementById("Bn");
+        
+        if (flag === 1) {
+            Bn.style.top = "400px";
+            Bn.style.left = "300px";
+            flag = 2;
+        } else if (flag === 2) {
+            Bn.style.top = "400px";
+            Bn.style.left = "50px";
+            flag = 3;
+        } else if (flag === 3) {
+            Bn.style.top = "370px";
+            Bn.style.left = "166px";
+            flag = 1;
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>Hey! You look beautiful!</h1>
+    <img src="https://c.tenor.com/sZPWbZj_QI8AAAAi/kakaotalk-emoticon.gif" height="200" alt="Emoji" />
+    <h1>Don't you think?</h1>
+    <div id="By">
+        <input type="button" value="YES" onclick="f1()" />
+    </div>
+    <div id="Bn">
+        <input type="button" value="NO" onmouseover="f()" />
+    </div>
+</body>
+</html>
